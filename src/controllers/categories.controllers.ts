@@ -150,4 +150,27 @@ export const getAllCategories = async (req: Request, res: Response) => {
           });
     }
   };
-  
+  export const getDetail = async(req:Request, res:Response)=>{
+    try {
+        const id = req.params.id;
+        const category = await CategoriesModel.findById(id);
+        if(!category){
+            return res.status(404).json({
+                code:-1,
+                message:"Category not found",
+                data:null
+            })
+        }
+        return res.status(200).json({
+            code:0,
+            data:category,
+            message:"success"
+        })
+    } catch (error) {
+        return res.status(500).json({
+            code: -1,
+            message: "Error",
+            data: null,
+          });
+    }
+  }

@@ -5,6 +5,7 @@ import routerUpload from './routes/upload.routes';
 import connectDB from './config/db.config';
 import cartRoutes from "./routes/cart.routes"
 import cartegoriesRoutes from "./routes/categories.routes"
+import brandRoutes from "./routes/brand.routes"
 dotenv.config();
 
 const app = express();
@@ -19,4 +20,5 @@ app.use('/api/users', userRoutes);
 app.use('/api', routerUpload)
 app.use('/api/cart', cartRoutes)
 app.use('/api/categories', cartegoriesRoutes)
+app.use("/api/brand", brandRoutes)
 export default app;
