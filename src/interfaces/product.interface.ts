@@ -11,7 +11,6 @@ export interface Product {
     images: string[];  // Array of URLs or file paths to product images
     isActive: boolean;  // Whether the product is active or not
     ratings?: number;  // Optional average rating of the product
-    reviews?: Review[];  // Optional array of reviews for the product
     createdAt: Date;  // Date when the product was created
     updatedAt: Date;  // Date when the product was last updated
   }
