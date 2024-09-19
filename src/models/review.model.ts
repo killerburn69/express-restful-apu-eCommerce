@@ -15,7 +15,7 @@ export const reviewSchema = new Schema({
     ref:'Product',
     default:null
   },
-  isActive:{
+  isBan:{
     type:Boolean,
     default:false
   },

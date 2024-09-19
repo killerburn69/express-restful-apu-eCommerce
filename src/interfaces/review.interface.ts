@@ -5,5 +5,5 @@ export interface Review {
     createdAt: Date;  // Date when the review was created
     productID:string;
     reasons?: string;
-    isActive: boolean;  // Whether the review is active or not
+    isBan: boolean;  // Whether the review is active or not
   }

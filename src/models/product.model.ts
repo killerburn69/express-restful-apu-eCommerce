@@ -9,7 +9,10 @@ const productSchema = new Schema({
     category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true },  // Reference to Category model
     brand: { type: mongoose.Schema.Types.ObjectId, ref: 'Brand' },  // Optional reference to Brand model
     stock: { type: Number, required: true, default: 0 },  // Stock available
-    images: { type: [String], required: true },  // Array of image URLs or file paths
+    sell:{type:Number,required: true, default:0},
+    images: { type: [String], required: true },
+    size:{type:[String]},
+    color:{type:[String]},  // Array of image URLs or file paths
     isActive: { type: Boolean, required: true, default: true },  // Product is active or not
     ratings: { type: Number, default: 0 },  // Optional average rating
     createdAt: { type: Date, default: Date.now },  // Date when the product was created
